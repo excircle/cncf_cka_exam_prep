@@ -285,6 +285,12 @@ The following commands will install `kubeadm` as well as the Kubernetes daemon a
 [user@host:~]$ sudo systemctl enable --now kubelet
 ```
 
+if you need to install a specific version of Kubernetes, you can do so by appending a version flag to the end of your package name. An example of this is listed below:
+
+```bash
+[user@host:~]$ sudo yum install kubelet-1.18.1-0 kubeadm-1.18.1-0 kubectl-1.18.1-0
+```
+
 #### Stage Local System Config For Kubernetes
 
 We will create a `kubeadm` configuration file. This simply provides some explicit settings explaining to k8s how we're running things.
